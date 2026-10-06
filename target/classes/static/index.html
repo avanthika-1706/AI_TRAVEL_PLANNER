@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voyage | Travel Planner</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="authView" class="auth-shell">
+  <div class="auth-visual">
+    <div class="brand-mark">✦ Voyage</div>
+    <div class="visual-copy"><span>TRAVEL PLANNING SYSTEM</span><h1>Plan your trip.<br><em>Travel with ease.</em></h1><p>Explore destinations across India and compare routes by distance, travel time and budget.</p></div>
+    <div class="route-art"><span>CHENNAI</span><b>→</b><span>PONDICHERRY</span><b>→</b><span>MADURAI</span></div>
+  </div>
+  <div class="auth-panel">
+    <div class="auth-tabs"><button class="auth-tab active" data-auth="login">Login</button><button class="auth-tab" data-auth="register">Create account</button></div>
+    <div id="loginForm" class="auth-form">
+      <div class="form-heading"><span class="mini-label">WELCOME BACK</span><h2>Sign in to Voyage</h2><p>Continue planning your next journey.</p></div>
+      <label>Email<input id="loginEmail" type="email" placeholder="you@example.com"></label>
+      <label>Password<input id="loginPassword" type="password" placeholder="••••••••"></label>
+      <button id="loginBtn" class="primary-btn">Sign In <span>→</span></button>
+    </div>
+    <div id="registerForm" class="auth-form hidden">
+      <div class="form-heading"><span class="mini-label">JOIN VOYAGE</span><h2>Create your account</h2><p>Use your own account to save travel plans.</p></div>
+      <label>Full name<input id="regName" type="text" placeholder="Your name"></label>
+      <label>Email<input id="regEmail" type="email" placeholder="you@example.com"></label>
+      <label>Password<input id="regPassword" type="password" placeholder="Minimum 6 characters"></label>
+      <button id="registerBtn" class="primary-btn">Create Account <span>→</span></button>
+    </div>
+    <p id="authMessage" class="form-message"></p>
+    <small>Your account, login session and saved trips are stored in the local database on this computer.</small>
+  </div>
+</div>
+
+<div id="appView" class="hidden">
+<header class="topbar">
+  <a class="logo" href="#home" data-page="home"><span>✦</span> Voyage</a>
+  <nav class="nav-tabs">
+    <button data-page="home" class="nav-tab active">Home</button>
+    <button data-page="planner" class="nav-tab">Plan Trip</button>
+    <button data-page="trips" class="nav-tab">My Trips</button>
+    <button data-page="destinations" class="nav-tab">Destinations</button>
+    <button data-page="about" class="nav-tab">How It Works</button><button data-page="profile" class="nav-tab">Profile</button>
+  </nav>
+  <div class="user-menu"><div class="avatar" id="avatar">A</div><span id="navUser">Traveler</span><button id="logoutBtn" class="logout">Logout</button></div>
+</header>
+
+<main>
+<section id="home" class="page active-page">
+  <div class="hero-section">
+    <div class="hero-copy"><span class="eyebrow">SMART ROUTE PLANNING</span><h1>Your journey,<br><span>optimized for your trip.</span></h1><p>Build personalized travel routes with A* Search. Choose what matters most — distance, speed, or budget.</p><div class="hero-actions"><button class="primary-btn" data-page="planner">Plan a Trip <span>→</span></button><button class="ghost-btn" data-page="about">How routes are calculated <span>↗</span></button></div></div>
+    <div class="hero-map"><div class="orbit o1"></div><div class="orbit o2"></div><div class="map-dot d1">CHN</div><div class="map-dot d2">PNY</div><div class="map-dot d3">MDU</div><div class="map-line"></div><div class="map-center">✦<small>A*</small></div></div>
+  </div>
+  <div class="section-title"><div><span class="eyebrow">WHY VOYAGE</span><h2>Everything you need to travel smarter.</h2></div></div>
+  <div class="feature-grid"><article><div class="icon">⌁</div><h3>Route Optimization</h3><p>The route planner compares the available road connections using your selected priority.</p></article><article><div class="icon">₹</div><h3>Budget Aware</h3><p>Set a budget and instantly see whether your selected route stays within it.</p></article><article><div class="icon">◷</div><h3>Day-wise Plans</h3><p>Turn the chosen route into a clean itinerary for your trip duration.</p></article></div>
+</section>
+
+<section id="planner" class="page">
+  <div class="page-heading"><span class="eyebrow">TRIP PLANNER</span><h1>Plan your next journey</h1><p>Choose your locations and select what matters most for the journey.</p></div>
+  <div class="planner-layout"><div class="planner-card">
+    <div class="step-pill"><b>01</b> Trip details</div>
+    <div class="input-grid"><label>Starting location<select id="start"></select></label><label>Destination<select id="destination"></select></label><label>Number of days<input id="days" type="number" min="1" value="4"></label><label>Budget (₹)<input id="budget" type="number" min="0" value="10000"></label></div>
+    <label>Optimize for<select id="preference"><option value="distance">Shortest Distance</option><option value="time">Fastest Route</option><option value="cost">Cheapest Route</option></select></label>
+    <button id="planBtn" class="primary-btn full-btn">Create Travel Plan <span>✦</span></button><p id="error" class="form-message"></p>
+  </div><aside class="algorithm-card"><span class="eyebrow">ROUTE PLANNING</span><div class="travel-icon">⌁</div><h3>Compare your journey</h3><p>Choose distance, travel time or budget as your priority. The planner calculates the most suitable route from the available road network.</p><div class="formula">Distance • Time • Cost</div></aside></div>
+  <section id="result" class="hidden result-area"><div class="result-header"><div><span class="eyebrow">YOUR TRAVEL PLAN</span><h2 id="resultTitle">Optimal route found</h2></div><span id="budgetStatus" class="badge"></span></div><div class="stats"><div><span>Distance</span><strong id="distance">-</strong></div><div><span>Travel time</span><strong id="time">-</strong></div><div><span>Travel cost</span><strong id="cost">-</strong></div><div><span>Algorithm</span><strong>A* Search</strong></div></div><div class="route-card"><h3>Optimal Route</h3><div id="route" class="route"></div></div><div class="itinerary-card"><h3>Day-wise itinerary</h3><div id="itinerary" class="itinerary"></div></div></section>
+</section>
+
+<section id="trips" class="page"><div class="page-heading"><span class="eyebrow">PERSONAL DASHBOARD</span><h1>My Trips</h1><p>Your generated travel plans are saved to your account and remain available after restarting the app.</p></div><div id="tripHistory" class="history-grid"></div></section>
+
+<section id="destinations" class="page"><div class="page-heading"><span class="eyebrow">EXPLORE THE DATASET</span><h1>Destinations</h1><p>Browse 50 destinations across India connected by 86 sample route links.</p></div><div id="destinationGrid" class="destination-grid"></div></section>
+
+<section id="about" class="page"><div class="page-heading"><span class="eyebrow">ROUTE CALCULATION</span><h1>How route calculation works</h1><p>See how the route calculation works behind the scenes.</p></div><div class="how-grid"><div class="how-card big"><span>01</span><h3>Build the graph</h3><p>Places become nodes and routes become weighted edges containing distance, travel time and cost.</p></div><div class="how-card"><span>02</span><h3>Calculate f(n)</h3><p><b>f(n) = g(n) + h(n)</b><br>g(n) is the cost travelled so far; h(n) estimates the remaining cost.</p></div><div class="how-card"><span>03</span><h3>Select the best node</h3><p>A priority queue expands the most promising node until the destination is reached.</p></div><div class="how-card"><span>04</span><h3>Generate the plan</h3><p>The final path is reconstructed and converted into distance, time, cost and a day-wise itinerary.</p></div></div><div class="mode-table"><h3>Three optimization choices</h3><div class="mode-row"><b>Shortest Distance</b><span>Minimizes total kilometres</span></div><div class="mode-row"><b>Fastest Route</b><span>Minimizes total travel time</span></div><div class="mode-row"><b>Cheapest Route</b><span>Minimizes total travel cost</span></div></div></section>
+
+<section id="profile" class="page"><div class="page-heading"><span class="eyebrow">ACCOUNT</span><h1>My Profile</h1><p>Account information and planning activity.</p></div><div class="profile-card"><div class="large-avatar" id="profileAvatar">A</div><div><h2 id="profileName">Traveler</h2><p id="profileEmail">email</p><div class="profile-stat"><span>Trips planned</span><b id="profileTrips">0</b></div></div></div></section>
+</main>
+<footer>Voyage • Java Spring Boot • A* Search • Academic Project</footer>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

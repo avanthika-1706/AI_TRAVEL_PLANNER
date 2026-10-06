@@ -1,0 +1,51 @@
+place_id,place_name,city,category,latitude,longitude,average_visit_hours,entry_fee
+P01,Chennai,Tamil Nadu,City,13.0827,80.2707,4,0
+P02,Mahabalipuram,Tamil Nadu,Heritage,12.6208,80.1945,5,100
+P03,Pondicherry,Puducherry,Beach,11.9416,79.8083,6,0
+P04,Bengaluru,Karnataka,City,12.9716,77.5946,5,0
+P05,Mysuru,Karnataka,Heritage,12.2958,76.6394,5,100
+P06,Coimbatore,Tamil Nadu,City,11.0168,76.9558,3,0
+P07,Ooty,Tamil Nadu,Hill Station,11.4064,76.6932,7,150
+P08,Madurai,Tamil Nadu,Temple,9.9252,78.1198,5,50
+P09,Rameswaram,Tamil Nadu,Pilgrimage,9.2876,79.3129,6,50
+P10,Kanyakumari,Tamil Nadu,Coastal,8.0883,77.5385,5,0
+P11,Kochi,Kerala,Coastal City,9.9312,76.2673,5,0
+P12,Munnar,Kerala,Hill Station,10.0889,77.0595,7,100
+P13,Thiruvananthapuram,Kerala,City,8.5241,76.9366,4,0
+P14,Hyderabad,Telangana,City,17.385,78.4867,5,100
+P15,Vijayawada,Andhra Pradesh,City,16.5062,80.648,3,0
+P16,Visakhapatnam,Andhra Pradesh,Coastal City,17.6868,83.2185,5,0
+P17,Tirupati,Andhra Pradesh,Pilgrimage,13.6288,79.4192,6,100
+P18,Nagpur,Maharashtra,City,21.1458,79.0882,3,0
+P19,Mumbai,Maharashtra,City,19.076,72.8777,5,0
+P20,Pune,Maharashtra,City,18.5204,73.8567,4,0
+P21,Goa,Goa,Beach,15.2993,74.124,7,0
+P22,Surat,Gujarat,City,21.1702,72.8311,3,0
+P23,Ahmedabad,Gujarat,City,23.0225,72.5714,4,0
+P24,Udaipur,Rajasthan,Heritage,24.5854,73.7125,5,100
+P25,Jodhpur,Rajasthan,Heritage,26.2389,73.0243,4,100
+P26,Jaipur,Rajasthan,Heritage,26.9124,75.7873,5,100
+P27,Delhi,Delhi,City,28.6139,77.209,5,0
+P28,Agra,Uttar Pradesh,Heritage,27.1767,78.0081,5,250
+P29,Amritsar,Punjab,Heritage,31.634,74.8723,4,0
+P30,Shimla,Himachal Pradesh,Hill Station,31.1048,77.1734,6,100
+P31,Manali,Himachal Pradesh,Hill Station,32.2396,77.1887,7,100
+P32,Dehradun,Uttarakhand,City,30.3165,78.0322,3,0
+P33,Haridwar,Uttarakhand,Pilgrimage,29.9457,78.1642,4,0
+P34,Srinagar,Jammu and Kashmir,Valley,34.0837,74.7973,6,0
+P35,Leh,Ladakh,Mountain,34.1526,77.5771,7,0
+P36,Lucknow,Uttar Pradesh,City,26.8467,80.9462,4,0
+P37,Ayodhya,Uttar Pradesh,Pilgrimage,26.7922,82.1998,4,0
+P38,Varanasi,Uttar Pradesh,Pilgrimage,25.3176,82.9739,5,0
+P39,Khajuraho,Madhya Pradesh,Heritage,24.8318,79.9199,5,150
+P40,Bhopal,Madhya Pradesh,City,23.2599,77.4126,3,0
+P41,Indore,Madhya Pradesh,City,22.7196,75.8577,3,0
+P42,Raipur,Chhattisgarh,City,21.2514,81.6296,3,0
+P43,Patna,Bihar,City,25.5941,85.1376,3,0
+P44,Ranchi,Jharkhand,City,23.3441,85.3096,3,0
+P45,Kolkata,West Bengal,City,22.5726,88.3639,5,0
+P46,Puri,Odisha,Beach/Pilgrimage,19.8135,85.8312,5,0
+P47,Bhubaneswar,Odisha,City,20.2961,85.8249,3,0
+P48,Guwahati,Assam,City,26.1445,91.7362,4,0
+P49,Shillong,Meghalaya,Hill Station,25.5788,91.8933,5,0
+P50,Darjeeling,West Bengal,Hill Station,27.041,88.2663,6,100
